@@ -1,0 +1,33 @@
+// buttons
+
+.btn-dark{
+	background-color: $bl;
+	color: $wt;
+	border: none;
+	padding: 14px 36px;
+	font-size: 14px;
+	border-radius: 0px;
+	text-transform: uppercase;
+	@include transition(all, 0.3s, ease);
+	&:hover, &:focus, &:active{
+		color: $wt !important;
+		background-color: lighten($bl, 25%) !important;
+		outline: none;
+		box-shadow: none !important;
+	}
+}
+
+/*.btn-default{
+	background-color: $second;
+	color: $wt;
+	border: none;
+	padding: 8px 15px;
+	font-size: 14px;
+	font-family: $b;
+	@include transition(all, 0.3s, ease);
+	&:hover, &:focus, &:active{
+		color: $wt;
+		background-color: lighten($second, 10%);
+		box-shadow: none !important;
+	}
+}*/

@@ -1,0 +1,116 @@
+// input
+
+input[type="text"].form-control, input[type="email"].form-control, input[type="number"].form-control, input[type="password"].form-control, textarea.form-control, select.form-control{
+	padding: 17px 20px;
+	border: none;
+	background-color: #FFF;
+	font-size: 14px;
+	color: #000;
+	height: auto;
+	@include border-radius(2px);
+	&::-webkit-input-placeholder { color: rgba(0, 0, 0, 0.2); }
+	&:-moz-placeholder { color: rgba(0, 0, 0, 0.2); }
+	&::-moz-placeholder { color: rgba(0, 0, 0, 0.2); }
+	&:-ms-input-placeholder { color: rgba(0, 0, 0, 0.2); }
+	&:hover, &:focus{
+		box-shadow: none;
+	}
+} 
+
+textarea.form-control{
+	resize: none;
+	max-width: 100%;
+	min-height: 130px;
+}
+
+.ui-datepicker{
+	background-color: #F8F8F8;
+	border: none !important;
+	box-shadow: 0px 0px 10px 3px rgba($color: #000000, $alpha: 0.1);
+	.ui-datepicker-header{
+		background-color: transparent;
+		border: none;
+		.ui-datepicker-prev{
+			transition: all 0.3s ease;
+			span{
+				background-position: center center;
+				background-image: url('../images/arrow-left.png')
+			}
+			&:hover, &:focus{
+				border: none;
+				background-color: lighten($third, 20%);
+			}
+		}
+		.ui-datepicker-next{
+			transition: all 0.3s ease;
+			span{
+				background-position: center center;
+				background-image: url('../images/arrow-right.png')
+			}
+			&:hover, &:focus{
+				border: none;
+				background-color: lighten($third, 20%);
+			}
+		}
+	}
+	.ui-datepicker-calendar{
+		tr{
+			th{
+				text-align: center;
+			}
+			td{
+				a{
+					text-align: center;
+					border: none;
+					background: none;
+					color: #08030D;
+					&.ui-state-active{
+						border: none;
+						background-color: $main;
+						color: #FFF;
+					}
+					&.ui-state-highlight{
+						position: relative;
+						&:before{
+							content: "";
+							width: 4px;
+							height: 4px;
+							background-color: #D92828;
+							border-radius: 50%;
+							position: absolute;
+							top: 0;
+							left: 50%;
+							transform: translateX(-50%);
+						}
+					}
+				}
+			}
+		}
+	}
+	.ui-datepicker-row-break{
+		display: none;
+	}
+	.ui-datepicker-buttonpane{
+		display: none;
+	}
+}
+
+/*select.form-control{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 25px 10px 15px;
+    background: url(../images/adown.png) no-repeat $wt center right 10px;
+	&:hover, &:focus{
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+select.form-control:not([size]):not([multiple]){
+	height: auto;
+}*/
+
+.form-group{
+	margin-bottom: 20px;
+}

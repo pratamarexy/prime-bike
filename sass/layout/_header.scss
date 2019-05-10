@@ -1,0 +1,115 @@
+// header
+header{
+    .navbar{
+        background-color: $bl;
+        position: relative;
+        .navbar-brand{
+            margin-right: 0px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            @include media-breakpoint-down(sm){
+                top: 7px;
+                left: 17px;
+                transform: none;
+            }
+        }
+        .navbar-toggler{
+            border: 1px solid rgba($color: $wt, $alpha: 0.7);
+            margin-left: auto;
+            padding: 5px 9px;
+            .navbar-toggler-icon{
+                background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255,255,255,0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+            }
+            &:hover, &:focus{
+                color: #B39977;
+                outline: none;
+                background-color: transparent;
+            }
+        }
+        .navbar-collapse{
+            .navbar-nav{
+                .nav-item{
+                    .nav-link{
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        padding: 28px 25px;
+                        color: $wt;
+                        @include media-breakpoint-down(md){
+                            padding: 28px 15px;
+                        }
+                        @include media-breakpoint-down(sm){
+                            padding: 10px 0px;
+                        }
+                    }
+                    &.dropdown{
+                        .dropdown-toggle{
+                            position: relative;
+                            .number{
+                                position: absolute;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                top: 27px;
+                                right: 17px;
+                                font-size: 7px;
+                                color: $wt;
+                                width: 11px;
+                                height: 11px;
+                                border-radius: 50%;
+                                background-color: #B7B7B7;
+                                @include media-breakpoint-down(md){
+                                    right: 9px;
+                                }
+                                @include media-breakpoint-down(sm){
+                                    right: auto;
+                                    top: 8px;
+                                    left: 12px;
+                                }
+                            }
+                            &:after{
+                                display: none;
+                            }
+                        }
+                        .dropdown-menu{
+                            width: 270px;
+                            @include media-breakpoint-down(sm){
+                                width: 100%;
+                            }
+                            .cart-item{
+                                padding: 10px 20px;
+                                overflow: hidden;
+                                img{
+                                    width: 80px;
+                                    float: left;
+                                }
+                                h5{
+                                    float: right;
+                                    font-size: 12px;
+                                    margin-top: 10px;
+                                }
+                                h6{
+                                    float: right;
+                                    clear: right;
+                                    font-size: 10px;
+                                    margin-bottom: 0px;
+                                }
+                            }
+                            .dropdown-item{
+                                font-size: 14px;
+                                text-align: center;
+                                transition: all 0.3s ease;
+                                &:hover, &:focus{
+                                    color: #B39977;
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

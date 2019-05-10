@@ -1,0 +1,18 @@
+// typhography
+
+@font-face {
+    font-family: 'Geometos';
+    src: url('../fonts/Geometos.eot?#iefix') format('embedded-opentype'),  
+         url('../fonts/Geometos.woff') format('woff'), 
+         url('../fonts/Geometos.ttf')  format('truetype'), 
+         url('../fonts/Geometos.svg#Geometos') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Geometos', sans-serif; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+

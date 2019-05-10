@@ -1,0 +1,6 @@
+assets/css/*.css.map
+.idea/
+.sass-cache
+
+node_modules
+bower_components

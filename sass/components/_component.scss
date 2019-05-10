@@ -1,0 +1,27 @@
+// component
+.goto-homepage{
+    position: fixed;
+    left: 5px;
+    top: 45%;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translateY(-50%) rotate(-90deg);
+    color: rgba($color: #FFF, $alpha: 0.6);
+    @include media-breakpoint-down(lg){
+        top: 35%;
+    }
+    @include media-breakpoint-down(md){
+        top: 35%;
+        left: 0;
+    }
+    @include media-breakpoint-down(sm){
+        display: none;
+    }
+    &:hover, &:focus{
+        color: #FFF;
+        text-decoration: none;
+    }
+}
+
